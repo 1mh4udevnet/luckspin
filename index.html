@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xoay Lì Xì May Mắn 🧧</title>
+    <meta name="description" content="Ứng dụng xoay lì xì may mắn - Thêm phong bì và quay để chọn người may mắn!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background decorations -->
+    <div class="fireworks"></div>
+    <div class="lanterns">
+        <div class="lantern"></div>
+        <div class="lantern"></div>
+        <div class="lantern"></div>
+    </div>
+
+    <!-- Main container -->
+    <div class="container">
+        <header>
+            <h1 class="title">🧧 Xoay Lì Xì May Mắn 🧧</h1>
+            <p class="subtitle">Thêm phong bì và quay để tìm người may mắn!</p>
+        </header>
+
+        <!-- Control buttons -->
+        <div class="controls">
+            <button id="addBtn" class="btn btn-add">
+                <span class="btn-icon">➕</span>
+                Thêm Lì Xì
+            </button>
+            <button id="spinBtn" class="btn btn-spin" disabled>
+                <span class="btn-icon">🎰</span>
+                Quay Ngay!
+            </button>
+        </div>
+
+        <!-- Envelope display area -->
+        <div class="spinner-container">
+            <div id="envelopeWheel" class="envelope-wheel">
+                <!-- Envelopes will be dynamically added here -->
+            </div>
+            <div class="center-circle">
+                <div class="center-text">Lì Xì</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Add Envelope Modal -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🧧 Thêm Lì Xì Mới</h2>
+                <button class="close-btn" id="closeAddModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <label for="moneyInput">Số tiền (VNĐ):</label>
+                <input type="number" id="moneyInput" placeholder="Nhập số tiền..." min="1000" step="1000">
+            </div>
+            <div class="modal-footer">
+                <button id="confirmAdd" class="btn btn-confirm">Thêm Ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Winner Modal -->
+    <div id="winnerModal" class="modal">
+        <div class="modal-content winner-content">
+            <div class="confetti-container"></div>
+            <div class="modal-header">
+                <h2>🎉 Chúc Mừng! 🎉</h2>
+                <button class="close-btn" id="closeWinnerModal">&times;</button>
+            </div>
+            <div class="modal-body winner-body">
+                <div class="winner-envelope">🧧</div>
+                <p class="winner-text">Bạn đã trúng:</p>
+                <p id="winnerAmount" class="winner-amount">0 đ</p>
+            </div>
+            <div class="modal-footer">
+                <button id="spinAgain" class="btn btn-confirm">Quay Lại</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

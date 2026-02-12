@@ -1,0 +1,12 @@
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+README.md
+task.md
+.gemini
+implementation_plan.md
+nginx.conf
+node_modules
+*.log
+.DS_Store

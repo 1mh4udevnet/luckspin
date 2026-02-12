@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+.env
+.gemini
+task.md
+implementation_plan.md
+walkthrough.md
